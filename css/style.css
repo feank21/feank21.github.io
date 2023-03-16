@@ -512,6 +512,11 @@ ul, li {
 		height: 26px;
 	}
 }
+@media (max-width: 460px) {
+	.count__items  .count__item {
+		flex: 0 0 100%;
+	}
+}
 
 /* info */
 .info {}
