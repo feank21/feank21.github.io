@@ -516,6 +516,10 @@ ul, li {
 	.count__items  .count__item {
 		flex: 0 0 100%;
 	}
+	.count__link {
+		height: auto;
+		line-height: 26px;
+	}
 }
 
 /* info */
