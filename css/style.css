@@ -111,6 +111,9 @@ body {
 	overflow-x: hidden;
 	background: #FDFDFD;
 }
+body._lock {
+	overflow: hidden;
+}
 input, select, textarea, button {
 	outline: 0;
 	font-size: inherit;
@@ -262,6 +265,32 @@ ul, li {
 	justify-content: space-between;
 	margin: 15px 0;
 }
+.btn-menu {
+	position: absolute;
+	top: 30px;
+	right: 25px;
+	display: none;
+	z-index: 102;
+	cursor: pointer;
+}
+.btn-menu span {
+	width: 25px;
+	height: 3px;
+	background: #b89150;
+	transition: all .25s;
+	display: block;
+	margin: 5px 0;
+	border-radius: 5px;
+}
+.header.active .btn-menu span:nth-child(2) {
+	transform: scale(0);
+}
+.header.active .btn-menu span:nth-child(1) {
+	transform: rotate(45deg) translate(8px, 8px);
+}
+.header.active .btn-menu span:nth-child(3) {
+	transform: rotate(-45deg) translate(3px, -3px);
+}
 @media (max-width: 1160px) {
 	.header > div {
 		min-height: 115px;
@@ -292,7 +321,7 @@ ul, li {
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
-	.header__logotype, .header__menu, .header__contacts {
+	.header__logotype, .header__contacts {
 		flex: 100%;
 		display: flex;
 		flex-wrap: wrap;
@@ -311,6 +340,35 @@ ul, li {
 	}
 	.header__contacts > div:last-child {
 		display: none;
+	}
+	.btn-menu {
+		display: block;
+	}
+	.header__menu {
+		z-index: 100;
+		transition: all .5s;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		position: fixed;
+		background: rgb(0 0 0 / 95%);
+		left: 0;
+		top: -100%;
+		visibility: hidden;
+	}
+	.menu__item {
+		color: #fff;
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding: 10px 0;
+		margin: 0 50px;
+	}
+	.header.active .header__menu {
+		top: 0;
+		overflow: auto;
+		padding: 40px 15px;
+		visibility: visible;
 	}
 }
 
