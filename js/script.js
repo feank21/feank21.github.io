@@ -10,3 +10,13 @@ $('a[href*="#"]').on('click', function(e) {
 $('.courses__header').on('click', function() {
 	$(this).parents('.courses__item').toggleClass('active');
 });
+
+$('.btn-menu').on('click', function() {
+	if ($('.header').hasClass('active')) {
+		$('.header').removeClass('active');
+		$('body').removeClass('_lock');
+	} else {
+		$('.header').addClass('active');
+		$('body').addClass('_lock');
+	}
+});
