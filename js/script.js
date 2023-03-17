@@ -5,6 +5,8 @@ $('a[href*="#"]').on('click', function(e) {
 		behavior: 'smooth',
 		block: 'start'
 	});
+	$('.header').removeClass('active');
+	$('body').removeClass('_lock');
 });
 
 $('.courses__header').on('click', function() {
