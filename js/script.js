@@ -5,8 +5,7 @@ $('a[href*="#"]').on('click', function(e) {
 		behavior: 'smooth',
 		block: 'start'
 	});
-	$('.header').removeClass('active');
-	$('body').removeClass('_lock');
+	$('body').removeClass('menu-active');
 });
 
 $('.courses__header').on('click', function() {
@@ -14,11 +13,9 @@ $('.courses__header').on('click', function() {
 });
 
 $('.btn-menu').on('click', function() {
-	if ($('.header').hasClass('active')) {
-		$('.header').removeClass('active');
-		$('body').removeClass('_lock');
+	if ($('body').hasClass('menu-active')) {
+		$('body').removeClass('menu-active');
 	} else {
-		$('.header').addClass('active');
-		$('body').addClass('_lock');
+		$('body').addClass('menu-active');
 	}
 });
