@@ -152,6 +152,7 @@ ul, li {
 	position: relative;
 	z-index: 1;
 	text-decoration: none;
+	text-align: center;
 }
 .btn.btn-small {
 	box-shadow: 0 4px 20px #B89150;
@@ -633,6 +634,7 @@ body.menu-active .btn-menu span:nth-child(3) {
 	display: inline-block;
 	cursor: pointer;
 	height: 32px;
+	text-decoration: none;
 }
 @media (max-width: 1160px) {
 	.count__text {
@@ -821,7 +823,7 @@ body.menu-active .btn-menu span:nth-child(3) {
 	border-radius: 50%;
 	background: linear-gradient(133.26deg, #B89150 17.42%, #083C86 100%);
 }
-.courses__body button {
+.courses__body a {
 	font-family: 'Oswald';
 	font-style: normal;
 	font-weight: 200;
@@ -833,8 +835,10 @@ body.menu-active .btn-menu span:nth-child(3) {
 	border-bottom: 1px dashed #083C86;
 	margin-bottom: 20px;
 	transition: border .25s;
+	text-decoration: none;
+	display: inline-block;
 }
-.courses__body button:hover {
+.courses__body a:hover {
 	border-bottom: 1px dashed #fff;
 }
 .courses__item.active .courses__body {
@@ -875,7 +879,7 @@ body.menu-active .btn-menu span:nth-child(3) {
 		width: 16px;
 		height: 16px;
 	}
-	.courses__body button {
+	.courses__body a {
 		font-size: 22px;
 		line-height: 32px;
 	}
