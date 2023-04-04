@@ -45,16 +45,24 @@ $('.modal__close').on('click', function() {
 	$('.modal-video .modal__body iframe').prop('src', '');
 });
 
+$('.courses__footer-btn').on('click', function() {
+	$('.courses').toggleClass('active');
+});
+
 const days = document.querySelector('.date-d');
 const hours = document.querySelector('.date-h');
 const minutes = document.querySelector('.date-i');
 const seconds = document.querySelector('.date-s');
+days.innerHTML = '<span>00</span>';
+hours.innerHTML = '<span>00</span>';
+minutes.innerHTML = '<span>00</span>';
+seconds.innerHTML = '<span>00</span>';
 
 //const deadline = new Date(countDown);
 const deadline = new Date(new Date(countDown).getTime() + new Date(countDown).getTimezoneOffset() * 60000);
 
-updateCounter();
 let timerId = setInterval(updateCounter, 1000);
+updateCounter();
 
 function updateCounter() {
 	const currentasdupog = new Date();
@@ -80,7 +88,11 @@ function updateCounter() {
 		minutes.innerHTML = i.split('').reduce( (r, c) => `${r}<span>${c}</span>`, '');
 		seconds.innerHTML = s.split('').reduce( (r, c) => `${r}<span>${c}</span>`, '');
 	} else {
-		clearTimeout(timerId);
+		if (timerId) clearTimeout(timerId);
+		days.innerHTML = '<span>00</span>';
+		hours.innerHTML = '<span>00</span>';
+		minutes.innerHTML = '<span>00</span>';
+		seconds.innerHTML = '<span>00</span>';
 	}
 }
 
