@@ -286,6 +286,9 @@ ul, li {
 	padding-top: 5px;
 	color: #0FB939;
 }
+.open-video {
+	cursor: pointer;
+}
 
 .container {
 	max-width: 1250px;
@@ -1718,31 +1721,35 @@ body.menu-active .btn-menu span:nth-child(3) {
 	text-align: center;
 	padding: 0 10px;
 }
+.date__info-title {
+	color: #083C86;
+	margin-bottom: 15px;
+	font-size: 30px;
+	line-height: 130%;
+}
 .date__price {
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 40px;
-	line-height: 135.02%;
+	font-size: 52px;
+	line-height: 120%;
 	text-transform: uppercase;
-	color: #B89150;
+	color: #083C86;
 	margin-bottom: 30px;
 }
-.date__price span {
-	padding: 15px;
-}
 .date__price s {
-	color: #083C86;
+	font-size: 40px;
+	color: #6f6f6f;
 }
 .date__up {
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 38px;
-	line-height: 135.02%;
+	font-size: 22px;
+	line-height: 130%;
 	text-align: center;
 	text-transform: uppercase;
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 }
 .date__timer {
 	margin-bottom: 60px;
@@ -1785,12 +1792,15 @@ body.menu-active .btn-menu span:nth-child(3) {
 		flex: 0 1 280px;
 	}
 	.date__price {
-		font-size: 26px;
-		line-height: 120%;
-		margin-bottom: 20px;
+		font-size: 32px;
+		line-height: 110%;
+		margin-bottom: 10px;
+	}
+	.date__price s {
+		font-size: 20px;
 	}
 	.date__up {
-		font-size: 20px;
+		font-size: 16px;
 		line-height: 120%;
 		margin-bottom: 25px;
 	}
